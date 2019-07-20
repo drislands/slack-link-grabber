@@ -4,7 +4,6 @@ info:
     version: "0.0.1"
     title: API used Swagger!
 consumes:
-    - application/json
     - application/x-www-form-urlencoded
 produces:
     - application/json
@@ -30,11 +29,15 @@ paths:
             description: Ships off the link.
             parameters:
                 - name: text
-                  in: body
+                  in: formData
                   description: Data to convert
                   required: True
-                  schema:
-                      type: string
+                  type: string
+                - name: token
+                  in: formData
+                  description: Verification token
+                  required: True
+                  type: string
             responses:
-                201:
+                200:
                     description: Successfully grabbed the link
