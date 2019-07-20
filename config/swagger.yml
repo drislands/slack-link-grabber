@@ -1,0 +1,40 @@
+swagger: "2.0"
+info:
+    description: You hurt yourself in confusion!
+    version: "0.0.1"
+    title: API used Swagger!
+consumes:
+    - application/json
+    - application/x-www-form-urlencoded
+produces:
+    - application/json
+
+basePath: /api
+
+paths:
+    /link:
+        get:
+            operationId: link.get
+            tags:
+                - Links
+            summary: Prints off the details of how this link grabber will work.
+            description: Prints link grab details
+            responses:
+                200:
+                    description: Successfully grabbed link details
+        post:
+            operationId: link.replace
+            tags:
+                - Links
+            summary: Generates a link based off of the data sent and ships it back.
+            description: Ships off the link.
+            parameters:
+                - name: text
+                  in: body
+                  description: Data to convert
+                  required: True
+                  schema:
+                      type: string
+            responses:
+                201:
+                    description: Successfully grabbed the link
