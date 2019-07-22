@@ -3,7 +3,7 @@ Provides a method to use a slash command in Slack and grab a meaningful link.
 
 ******
 
-Requires python 3 and the connexion, dotenv and connexion[swagger-ui] modules to be installed. Set a
+Requires python 3 and the python-dotenv and connexion[swagger-ui] modules to be installed. Set a
 file in the root directory called `.env` and put two variables in there in the 
 following format:
 
